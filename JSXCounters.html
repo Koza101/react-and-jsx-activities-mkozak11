@@ -24,12 +24,75 @@
       );
     }
 
+    function Addition({ start }) {
+      const [counter, setAddVal] = React.useState(start);
+      return (
+        <main>
+          <p>
+            Counter: {counter}
+          </p>
+          <input id="value" type="number">
+          </input>
+          <button onClick={() => setAddVal((value) => value + 2)}>
+            Add 2
+          </button>
+
+        </main>
+      );  
+  }
+
+    function Subtract({ start }) {
+      const [counter, setSubtract] = React.useState(start);
+      return (
+        <main>
+          <p>
+            Counter: {counter}
+          </p>
+          <button onClick={() => setSubtract((value) => value - 2)}>
+            Subtract 2
+          </button>
+        </main>
+      );  
+  }
+
+    function Multiply({ start }) {
+      const [counter, setMultiply] = React.useState(start);
+      return (
+        <main>
+          <p>
+            Counter: {counter}
+          </p>
+          <button onClick={() => setMultiply((value) => value * 2)}>
+            Multiply by 2
+          </button>
+        </main>
+      );  
+  }
+
+    function Divide({ start }) {
+      const [counter, setDivide] = React.useState(start);
+      return (
+        <main>
+          <p>
+            Counter: {counter}
+          </p>
+          <button onClick={() => setDivide((value) => value / 2)}>
+            Divide by 2
+          </button>
+        </main>
+      );  
+  }
+
     function App() {
       return (
         <div>
           <Counter start={0} />
           <Counter start={123} />
           <Counter start={-64} />
+          <Addition start={0} />
+          <Subtract start={0} />
+          <Multiply start={1} />
+          <Divide start={400} />
         </div>
       );
     }
